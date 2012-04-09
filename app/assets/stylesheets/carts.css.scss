@@ -1,0 +1,40 @@
+//= require application
+
+#cart_items{
+  li{
+    list-style: none;
+    .row{
+      height: 50px;
+      padding: 10px;
+      border-bottom: 1px solid #eee;
+      img{
+        width: 50px;
+        float: left;
+      }
+      .product_name{
+        display: inline-block;
+        width: 700px;
+        line-height: 50px;
+        margin-left: 20px;
+      }
+      .product_quantity,.product_price{
+        font-size: 1.2em;
+      }
+      .product_quantity{
+        display: inline-block;
+        width: 50px;
+        margin-right: 10px;
+      }
+      
+    } 
+  }
+  .last_row{
+    text-align: right;
+    font-size: 1.5em;
+  }
+  
+}
+
+#btn_cancel_all_items{
+  
+}

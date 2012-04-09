@@ -1,0 +1,59 @@
+@import "compass_twitter_bootstrap";
+
+
+
+$experimental-support-for-svg: true;
+
+
+
+
+//header
+#header{
+  background-color: rgb(242,245,246);
+  padding: 10px 0;
+  overflow: hidden;
+  .logo{
+    float: left;
+  }
+  
+  #main-nav{
+    list-style: none;
+    float: left;
+    margin: 10px 0 0 20px;
+    li{
+      float: left;
+      margin-right: 10px;
+      a{
+        font-size: 1.3em;
+      }
+    }
+  }
+  
+  #mini-cart{
+    float: right;
+    margin-top: 10px;
+    #mini-cart-show-detail{
+      font-size: 14px;
+      padding-right: 14px;
+      small{
+        margin-left: 4px;
+      }
+    }
+    #mini-cart-wrap{
+    }
+  }
+  
+}
+
+#notice{
+  margin-top: 2em;
+  @extend .alert;
+  @extend .alert-error;
+}
+
+#footer{
+  border-top: 1px solid #eaeaea;
+  padding: 15px 0;
+  margin-top: 20px;
+  text-align: center;
+}

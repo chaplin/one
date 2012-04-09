@@ -1,0 +1,14 @@
+//= require application
+#products{
+  overflow: hidden;
+  .entry{
+    float: left;
+    img{
+        border: none;
+        width: 170px;
+    }
+    .btn_add_to_cart{
+
+    }
+  }
+}

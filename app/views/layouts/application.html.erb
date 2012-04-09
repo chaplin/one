@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%= @page_title %></title>
+  <%= stylesheet_link_tag params[:controller], :media=> 'all' %>
+  <%= csrf_meta_tags %>
+
+
+
+
+  <script>
+    App = {};
+    App.cart = <%= @cart.to_json.html_safe %>;
+    App.cart['items'] = <%= @cart.line_items.to_json.html_safe %>;
+  </script>
+
+
+</head>
+<body>
+<div class="container">
+	
+	<header id="header">
+    <%= image_tag('logo.png', :class=>'logo') %>
+
+    <ul id="main-nav">
+      <li><a href="/">Home</a></li>
+      <li><a href="/contact">Contact</a></li>
+    </ul>
+    
+    <div id="" class="">
+      
+    </div>
+    
+    <div id="mini-cart" class=""> 
+      <a id="mini-cart-show-detail" href="#">
+        購物車 NT$ <%= @cart.total_price %><small>(<%= @cart.line_items.to_a.length %>)</small>
+      </a>
+      <div id="mini-cart-wrap" class=""></div>
+    </div>
+    
+  </header>
+
+
+  <div id="main">
+    <%= yield %>
+  </div>
+
+
+
+  <footer id="footer">
+    <strong>2012 @copyright</strong>
+  </footer>
+  
+  
+</div>
+
+<%= javascript_include_tag "application", params[:controller] %>
+</body>
+</html>

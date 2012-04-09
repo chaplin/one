@@ -1,0 +1,30 @@
+<% if !notice.nil? %>
+      <p id="notice"><%= notice %></p>
+<% end %>
+
+
+
+
+<section id="products" class="">
+  <h1>Your catalog</h1>
+  
+  <% @products.each do |product| %>
+  <div class="entry">
+
+    <%= image_tag(product.image_url) %>
+    <h3><%= product.title %></h3>
+    <%= sanitize(product.description) %>
+
+    <div class="price_line">
+      <span class="price"><%= product.price %></span>
+      <span class="price"><%= number_to_currency(product.price) %></span>
+    </div>
+    
+    <div id="" class="actions">
+      <%= button_to 'Add to Cart', line_items_path(:product_id => product), :class=>"btn add_to_cart" %>
+    </div>
+  
+  </div>
+  <% end %>
+  
+</section>

@@ -1,0 +1,10 @@
+/* line 2, ../../app/assets/stylesheets/store.css.scss */
+#products {
+  overflow: hidden; }
+  /* line 4, ../../app/assets/stylesheets/store.css.scss */
+  #products .entry {
+    float: left; }
+    /* line 6, ../../app/assets/stylesheets/store.css.scss */
+    #products .entry img {
+      border: none;
+      width: 170px; }
