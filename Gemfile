@@ -9,6 +9,8 @@ gem 'rake', '0.9.2.2'
 
 gem 'sqlite3'
 
+gem 'thin'
+
 gem 'json'
 
 # Gems used only for assets and not required
